@@ -13,11 +13,11 @@ interface Props {
 const { href1, href2, href3, hrefImg, altImg, title1, title2, title3 } = Astro.props;
 ---
 
-<nav class="flex flex-col md:flex-row md:justify-between bg-[#080808] text-slate-50 pt-5 pb-5">
+<nav class="fixed top-0 left-0 w-full flex flex-col md:flex-row md:justify-between bg-[#080808] text-slate-50 pt-2 pb-2 z-50">
   <div class="hidden md:flex md:items-center">
-    <img class="lg:w-[100px] ml-5 pr-2" src={hrefImg} alt={altImg} />
+    <img class="lg:w-[100px] ml-5 mr-2" src={hrefImg} alt={altImg} />
   </div>
-  <div class="flex flex-row items-center justify-center font-sans text-[20px] font-semibold mr-5 ml-5">
+  <div class="flex flex-row items-center justify-center font-sans text-[25px] font-semibold mr-5 ml-5">
     <ul class="flex flex-row gap-4 content-between">
       <li>
         <a href={href1} class="text-white hover:text-[#ce83ec]">{title1}</a>
@@ -29,7 +29,7 @@ const { href1, href2, href3, hrefImg, altImg, title1, title2, title3 } = Astro.p
         <a href={href3} class="text-white hover:text-[#ce83ec]">{title3}</a>
       </li>
       <li>
-        <span class="icon-[solar--cart-large-2-broken]   text-2xl cursor-pointer" role="img" aria-hidden="true" id="cart"/>
+        <span class="icon-[solar--cart-large-2-broken] text-2xl cursor-pointer" role="img" aria-hidden="true" id="cart"/>
       </li>
     </ul>
   </div>

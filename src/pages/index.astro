@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { ProductList } from '../components/ProductList';
 import Contact from '../layouts/Contact.astro';
+import { Footer }  from '../components/Footer'
 ---
 
 <!DOCTYPE html>
@@ -10,17 +11,20 @@ import Contact from '../layouts/Contact.astro';
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Deyla Shop</title>
+        <title></title>
+        <link rel="shortcut icon" href="/Deyla-Isotype.svg" type="image/x-icon">
         <!-- Fonts Montserrat full axis -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
-    <body class="bg-[#090909]">
+    <body class="bg-[#090909] overflow-x-hidden">
         <Layout />
         <ProductList client:only />
         <!-- <Contact /> -->
+        <Footer />
     </body>
-    
+
+    <script src="./config.js"></script>
 </html>
