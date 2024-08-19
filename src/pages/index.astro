@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { ProductList } from '../components/ProductList';
-import Contact from '../layouts/Contact.astro';
 import { Footer }  from '../components/Footer'
 ---
 
@@ -22,9 +21,9 @@ import { Footer }  from '../components/Footer'
     <body class="bg-[#090909] overflow-x-hidden">
         <Layout />
         <ProductList client:only />
-        <!-- <Contact /> -->
-        <Footer />
+        <Footer client:only/>
     </body>
 
-    <script src="./config.js"></script>
+    <script src="./config.js" is:inline></script>
+    
 </html>
