@@ -24,6 +24,18 @@ import { Footer }  from '../components/Footer'
         <Footer client:only/>
     </body>
 
-    <script src="./config.js" is:inline></script>
-    
+    <script src="./config.js"></script>
+    <script type="module" is:inline>
+        if (typeof window !== 'undefined') {
+          import('./config.js').then(module => {
+            if (typeof module.init === 'function') {
+              module.init();
+            } else {
+              console.warn('Module does not export an `init` function.');
+            }
+          }).catch(err => {
+            console.error('Failed to load config.js:', err.message);
+          });
+        }
+      </script>
 </html>
